@@ -51,7 +51,7 @@ main {
 }
 .elements {
   margin: 0 auto;
-  height: 50%;
+  max-height: 50%;
   width: 100%;
   .elements-container {
     display: flex;
