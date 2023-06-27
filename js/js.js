@@ -12,6 +12,11 @@ const closeBox = document.querySelector('.close-box');
 const choose = document.querySelector('.chose');
 const winner = document.querySelector('.winner-item');
 const repeat = document.querySelector('.repeat');
+const loader = document.querySelector(".loading")
+
+
+
+
 
 const closeFirst = () => {
     welcomePage.classList.toggle('d-none');
@@ -47,13 +52,22 @@ const los = () => {
     const losIt = array[Math.floor(Math.random() * array.length)];
     if (array.length < 2) {
         error.style.visibility = 'visible';
-        error.innerHTML = 'Musisz dodać minimum dwóch uczestników!!';
+        error.innerHTML = 'Musisz dodać minimum 2 uczestników!';
     } else {
+
+
+        loader.style.display = 'flex'; // ustawia element na widoczny
+
+        setTimeout(() => {
+            loader.style.display = 'none'; // po 10 sekundach zmienia element na niewidoczny
+        }, 1000);
+
+
         setTimeout(() => {
             winnerPage.classList.toggle('d-none');
             main.classList.toggle('d-none');
             winner.textContent = `${losIt}`;
-        }, 1000);
+        }, 1001);
     }
 }
 
@@ -68,7 +82,8 @@ const deleteAll = () => {
 const repeatLos = () => {
     winnerPage.classList.toggle('d-none');
     main.classList.toggle('d-none');
-    setTimeout(los, 1000);
+    // setTimeout(los, 1000);
+    los()
 }
 
 

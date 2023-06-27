@@ -1,11 +1,15 @@
 main {
+  background-color: rgba(17, 17, 17, 0.712);
+  backdrop-filter: blur(20px);
   height: 100vh;
 }
 .header {
-  height: 50%;
+  height: 60%;
   .container {
+    border-bottom: 3px solid #fff;
     justify-content: space-between;
     height: 80%;
+    padding-bottom: 5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -37,6 +41,8 @@ main {
 }
 
 .buttons {
+  margin-bottom: 5rem;
+
   display: flex;
   width: 90%;
   flex-direction: row;
@@ -50,6 +56,7 @@ main {
   }
 }
 .elements {
+  // background-color: gray;
   margin: 0 auto;
   max-height: 50%;
   width: 100%;
@@ -90,6 +97,7 @@ main {
 }
 
 .winner-page {
+  background-color: rgba(17, 17, 17, 0.712);
   //   position: fixed;
   display: flex;
 
